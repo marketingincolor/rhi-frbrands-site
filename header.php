@@ -38,17 +38,9 @@ $white_logo    = $custom_fields['white_logo'];
 	<header class="header full-width">
 		<div class="site-header" role="banner">
 			<div id="site-details" class="row">
-			<?php if(is_front_page()) : ?>
 				<div id="logo" class="small-6 medium-4 text-center medium-centered vertical-center columns">
 					<a href="<?php echo site_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/r7-grfx-hdr-lrg-logo.png"/></a>
 				</div>
-			<?php else: ?>
-				<div id="logo" class="small-8 medium-4 text-center medium-centered vertical-center columns">
-					<a href="<?php echo site_url(); ?>"><img src="<?php echo $white_logo[0]; ?>" class="small-img"/></a>
-				</div>
-			<?php endif; ?>
-
-
 				<?php include get_template_directory() . '/includes/mobile-menu.php'; ?>
 			</div>
 		</div>
