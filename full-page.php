@@ -1,14 +1,7 @@
 <?php
-/**
- * The header template
- *
- * @package WordPress
- * @subpackage zfwp-base
- * @since ZFWP Base 1.0
+/*
+Template Name: Full Page Template
  */
-$page_id       = get_queried_object_id();
-$custom_fields = get_post_custom($page_id);
-$white_logo    = $custom_fields['white_logo'];
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -26,19 +19,25 @@ $white_logo    = $custom_fields['white_logo'];
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/foundation.min.css" />
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css" type="text/css" />
 	<script src="<?php echo get_template_directory_uri(); ?>/js/vendor/modernizr.js"></script>
-	<?php if ( is_front_page() ) : ?>
-	<?php endif; ?>
-
 	<?php wp_head(); ?>
-
 </head>
-
 <body <?php body_class(); ?>>
+	<header class="unheader full-width"></header>
+	<div id="main-content" class="row">
 
-	<header class="header full-width">
-		<div class="site-header" role="banner">
-			<div id="site-details" class="row">
-				<?php include get_template_directory() . '/includes/mobile-menu.php'; ?>
-			</div>
-		</div>
-	</header>
+			<?php
+			// Start the loop.
+			while ( have_posts() ) : the_post();
+				// Include the page content template.
+				get_template_part( 'content', 'full' );
+
+				// If comments are open or we have at least one comment, load up the comment template.
+				if ( comments_open() || get_comments_number() ) :
+					comments_template();
+				endif;
+				// End the loop.
+			endwhile;
+			?>
+
+	</div>
+<?php get_footer(); ?>
