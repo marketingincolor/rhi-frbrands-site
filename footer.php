@@ -64,6 +64,7 @@ global $post;
 <script src="<?php echo get_template_directory_uri(); ?>/js/vendor/jquery.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/foundation.min.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/foundation/foundation.topbar.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/foundation/foundation.tabs.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/foundation/foundation.dropdown.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/foundation/foundation.accordion.js"></script>
 

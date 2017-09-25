@@ -464,6 +464,8 @@ div#custom-nav { height:180px; display:inline-block; vertical-align:middle; }
 .entry-content .dlm-downloads { display:inline-block; margin-bottom:1.25em; list-style:none; max-height: 240px; overflow-x:hidden;  overflow-y:scroll; }
 .entry-content .dlm-downloads li { font-size:.75em; width:48%; float:left; }
 .entry-content .dlm-downloads li p { font-size:.5em; margin-bottom:.125em; }
+.tabs-content .content p { display:inline-block !important; padding:0em 1em; }
+.type-page .entry-content h6 { font-size:.75em; }
 /**
  * 5.4 Galleries
  * -----------------------------------------------------------------------------
